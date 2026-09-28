@@ -7,5 +7,5 @@
 | **Preconditions**    | Calculator page is loaded and the operation is set to **Subtract**.                                                                             |
 | **Test Steps**       | 1. Enter `15` into the First number field.<br>2. Enter `0` into the Second number field.<br>3. Ensure **Integers only** is unchecked.<br>4. Select **Subtract**.<br>5. Click **Calculate**. |
 | **Expected Result**  | The Answer field displays `15`.                                                                                                                |
-| **Actual Result**    | `23.8`                                                                                                                                          |
-| **Verdict**          |Fail                                                                                                                                |
+| **Actual Result**    |                                                                                                                                                 |
+| **Verdict**          |                                                                                                                                                 |

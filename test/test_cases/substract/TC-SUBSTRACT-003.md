@@ -7,5 +7,5 @@
 | **Preconditions**    | Calculator page is loaded and the operation is set to **Subtract**.                                                                             |
 | **Test Steps**       | 1. Enter `8` into the First number field.<br>2. Enter `8` into the Second number field.<br>3. Ensure **Integers only** is unchecked.<br>4. Select **Subtract**.<br>5. Click **Calculate**. |
 | **Expected Result**  | The Answer field displays `0`.                                                                                                                 |
-| **Actual Result**    | `-24`                                                                                                                                           |
-| **Verdict**          | Fail                                                                                                                                |
+| **Actual Result**    |                                                                                                                                                 |
+| **Verdict**          |                                                                                                                                                 |
