@@ -1,0 +1,11 @@
+| Field                | Details                                                                                                                                                                       |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Test ID**          | TC-MUL-009                                                                                                                                                                    |
+| **Test Name**        | Verify multiplication when Integer Only is enabled                                                                                                                            |
+| **Module**           | Calculator – Multiplication / Integer Only                                                                                                                                    |
+| **Test Environment** | Windows 10/11, Google Chrome/Firefox, Basic Calculator                                                                                                                        |
+| **Preconditions**    | Calculator page is loaded, the operation is set to **Multiply**, and **Integers only** is enabled.                                                                            |
+| **Test Steps**       | 1. Enter `5` into the First number field.<br>2. Enter `6` into the Second number field.<br>3. Enable **Integers only**.<br>4. Select **Multiply**.<br>5. Click **Calculate**. |
+| **Expected Result**  | The Answer field displays the integer result `30`.                                                                                                                            |
+| **Actual Result**    | TBD                                                                                                                                                                           |
+| **Verdict**          | TBD – Pass/Fail                                                                                                                                                               |
