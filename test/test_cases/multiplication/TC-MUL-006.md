@@ -1,11 +1,11 @@
-| Field                | Details                                                                                                                                          |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Test ID**          | TC-MUL-006                                                                                                                                       |
-| **Test Name**        | Verify multiplication by one                                                                                                                     |
-| **Module**           | Calculator – Multiplication                                                                                                                      |
-| **Test Environment** | Windows 10/11, Google Chrome/Firefox, Basic Calculator                                                                                           |
-| **Preconditions**    | Calculator page is loaded and the operation is set to **Multiply**.                                                                              |
-| **Test Steps**       | 1. Enter `1234` into the First number field.<br>2. Enter `1` into the Second number field.<br>3. Select **Multiply**.<br>4. Click **Calculate**. |
-| **Expected Result**  | The Answer field displays `1234`.                                                                                                                |
-| **Actual Result**    | TBD                                                                                                                                              |
-| **Verdict**          | TBD – Pass/Fail                                                                                                                                  |
+| Field                | Details                                                                                                                                                                                        |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Test ID**          | TC-MUL-006                                                                                                                                                                                     |
+| **Test Name**        | Verify multiplication of two positive decimal numbers                                                                                                                                          |
+| **Module**           | Calculator – Multiplication                                                                                                                                                                    |
+| **Test Environment** | Windows 10/11, Google Chrome/Firefox, Basic Calculator                                                                                                                                         |
+| **Preconditions**    | Calculator page is loaded, **Integers only** is unchecked, and the operation is set to **Multiply**.                                                                                           |
+| **Test Steps**       | 1. Enter `2.5` into the First number field.<br>2. Enter `4.2` into the Second number field.<br>3. Select **Multiply**.<br>4. Ensure **Integers only** is unchecked.<br>5. Click **Calculate**. |
+| **Expected Result**  | The Answer field displays `10.5`.                                                                                                                                                              |
+| **Actual Result**    | TBD                                                                                                                                                                                            |
+| **Verdict**          | TBD – Pass/Fail                                                                                                                                                                                |

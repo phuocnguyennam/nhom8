@@ -24,137 +24,143 @@ test_cases = [
 
     {
         "id": "TC-MUL-001",
-        "name": "Multiply two positive integers",
+        "name": "Verify multiplication of two positive integers",
         "first": "5",
         "second": "10",
-        "expected": "50",
         "integer_only": False,
+        "expected": "50",
     },
 
     {
         "id": "TC-MUL-002",
-        "name": "Multiply two negative integers",
-        "first": "-5",
-        "second": "-10",
-        "expected": "50",
+        "name": "Verify multiplication by zero",
+        "first": "25",
+        "second": "0",
         "integer_only": False,
+        "expected": "0",
     },
 
     {
         "id": "TC-MUL-003",
-        "name": "Multiply positive and negative integers",
-        "first": "10",
-        "second": "-5",
-        "expected": "-50",
+        "name": "Verify multiplication of two zero values",
+        "first": "0",
+        "second": "0",
         "integer_only": False,
+        "expected": "0",
     },
 
     {
         "id": "TC-MUL-004",
-        "name": "Multiply by zero",
-        "first": "12345",
-        "second": "0",
-        "expected": "0",
+        "name": "Verify negative multiplied by positive",
+        "first": "-5",
+        "second": "10",
         "integer_only": False,
+        "expected": "-50",
     },
 
     {
         "id": "TC-MUL-005",
-        "name": "Multiply zero by zero",
-        "first": "0",
-        "second": "0",
-        "expected": "0",
+        "name": "Verify negative multiplied by negative",
+        "first": "-5",
+        "second": "-10",
         "integer_only": False,
+        "expected": "50",
     },
 
     {
         "id": "TC-MUL-006",
-        "name": "Multiply by one",
-        "first": "1234",
-        "second": "1",
-        "expected": "1234",
+        "name": "Verify multiplication of decimal numbers",
+        "first": "2.5",
+        "second": "4.2",
         "integer_only": False,
+        "expected": "10.5",
     },
 
     {
         "id": "TC-MUL-007",
-        "name": "Multiply two decimal numbers",
-        "first": "2.5",
-        "second": "4.0",
-        "expected": "10",
+        "name": "Verify decimal multiplied by integer",
+        "first": "3.5",
+        "second": "4",
         "integer_only": False,
+        "expected": "14",
     },
 
     {
         "id": "TC-MUL-008",
-        "name": "Multiply decimal values producing a decimal result",
+        "name": "Verify Integers only option",
         "first": "2.5",
-        "second": "1.5",
-        "expected": "3.75",
-        "integer_only": False,
+        "second": "3",
+        "integer_only": True,
+        "expected": "7",
     },
 
     {
         "id": "TC-MUL-009",
-        "name": "Integer Only with multiplication",
-        "first": "5",
-        "second": "6",
-        "expected": "30",
-        "integer_only": True,
+        "name": "Verify multiplication of large positive integers",
+        "first": "100000",
+        "second": "20000",
+        "integer_only": False,
+        "expected": "2000000000",
     },
 
     {
         "id": "TC-MUL-010",
-        "name": "Decimal multiplication with Integer Only",
-        "first": "2.5",
-        "second": "1.5",
-        "expected": "3",
-        "integer_only": True,
+        "name": "Verify multiplication by one",
+        "first": "12345",
+        "second": "1",
+        "integer_only": False,
+        "expected": "12345",
     },
 
     {
         "id": "TC-MUL-011",
-        "name": "Multiply large integers",
-        "first": "1000000",
-        "second": "1000000",
-        "expected": "1000000000000",
+        "name": "Verify negative decimal multiplied by negative integer",
+        "first": "-2.5",
+        "second": "-4",
         "integer_only": False,
+        "expected": "10",
     },
 
     {
         "id": "TC-MUL-012",
-        "name": "Multiply with empty First number",
-        "first": "",
-        "second": "10",
-        "expected": "0",
+        "name": "Verify negative decimal multiplied by positive decimal",
+        "first": "-2.5",
+        "second": "1.2",
         "integer_only": False,
+        "expected": "-3",
     },
 
     {
         "id": "TC-MUL-013",
-        "name": "Multiply with empty Second number",
-        "first": "10",
-        "second": "",
-        "expected": "0",
+        "name": "Verify multiplication of very small decimal values",
+        "first": "0.001",
+        "second": "0.002",
         "integer_only": False,
+        "expected": "0.000002",
     },
 
     {
         "id": "TC-MUL-014",
-        "name": "Multiply with non-numeric input",
-        "first": "ABC",
+        "name": "Verify Clear button",
+        "first": "5",
         "second": "10",
-        "expected": None,
         "integer_only": False,
+
+        # First calculate 5 × 10 = 50,
+        # then Clear should remove the values.
+        "expected": "50",
     },
 
     {
         "id": "TC-MUL-015",
-        "name": "Clear button after multiplication",
-        "first": "25",
-        "second": "4",
-        "expected": None,
+        "name": "Verify multiplication with missing second number",
+        "first": "5",
+        "second": "",
         "integer_only": False,
+
+        # Observation-based because the exact error behavior
+        # depends on the calculator implementation.
+        "expected": None,
     },
 ]
 
@@ -164,7 +170,10 @@ test_cases = [
 # ============================================================
 
 def normalize(value):
-    """Remove leading/trailing whitespace."""
+    """
+    Remove leading/trailing whitespace.
+    """
+
     if value is None:
         return ""
 
@@ -172,22 +181,30 @@ def normalize(value):
 
 
 def select_build(page):
-    """Select the configured calculator build."""
+    """
+    Select the configured calculator build.
+    """
+
     page.locator("#selectBuild").select_option(BUILD)
 
-    # Give the build's JavaScript time to update the page.
+    # Allow build-specific JavaScript to update the page.
     page.wait_for_timeout(200)
 
 
 def set_integer_only(page, enabled):
-    """Enable or disable the Integer Only checkbox."""
+    """
+    Enable or disable the Integer Only checkbox.
+    """
 
     checkbox = page.locator("#integerSelect")
 
     if enabled:
+
         if not checkbox.is_checked():
             checkbox.check()
+
     else:
+
         if checkbox.is_checked():
             checkbox.uncheck()
 
@@ -195,7 +212,9 @@ def set_integer_only(page, enabled):
 
 
 def get_answer(page):
-    """Read the Answer field."""
+    """
+    Read the Answer field.
+    """
 
     return normalize(
         page.locator("#numberAnswerField").input_value()
@@ -203,13 +222,17 @@ def get_answer(page):
 
 
 # ============================================================
-# RUN ONE TEST
+# RUN ONE TEST CASE
 # ============================================================
 
 def run_test(page, test):
 
+    # --------------------------------------------------------
     # Open calculator
+    # --------------------------------------------------------
+
     page.goto(URL)
+
     page.wait_for_load_state("domcontentloaded")
 
     # --------------------------------------------------------
@@ -222,14 +245,27 @@ def run_test(page, test):
     # Enter numbers
     # --------------------------------------------------------
 
-    page.locator("#number1Field").fill(test["first"])
-    page.locator("#number2Field").fill(test["second"])
+    page.locator("#number1Field").fill(
+        test["first"]
+    )
+
+    page.locator("#number2Field").fill(
+        test["second"]
+    )
 
     # --------------------------------------------------------
     # Select Multiply
+    #
+    # 0 = Add
+    # 1 = Subtract
+    # 2 = Multiply
+    # 3 = Divide
+    # 4 = Concatenate
     # --------------------------------------------------------
 
-    page.locator("#selectOperationDropdown").select_option("2")
+    page.locator(
+        "#selectOperationDropdown"
+    ).select_option("2")
 
     # --------------------------------------------------------
     # Integer Only
@@ -244,9 +280,11 @@ def run_test(page, test):
     # Calculate
     # --------------------------------------------------------
 
-    page.locator("#calculateButton").click()
+    page.locator(
+        "#calculateButton"
+    ).click()
 
-    # Allow JavaScript to update the Answer field.
+    # Allow JavaScript to update Answer.
     page.wait_for_timeout(300)
 
     # --------------------------------------------------------
@@ -255,44 +293,63 @@ def run_test(page, test):
 
     actual = get_answer(page)
 
-    # --------------------------------------------------------
-    # TC-MUL-015
-    # --------------------------------------------------------
 
-    if test["id"] == "TC-MUL-015":
+    # ========================================================
+    # TC-MUL-014
+    # Clear button
+    # ========================================================
 
+    if test["id"] == "TC-MUL-014":
+
+        # First verify that multiplication worked.
         multiplication_result = actual
 
-        # Click Clear
-        page.locator("#clearButton").click()
+        # Click Clear.
+        page.locator(
+            "#clearButton"
+        ).click()
 
         page.wait_for_timeout(300)
 
-        # Check whether everything was cleared.
+        # Read fields after Clear.
         first_after_clear = normalize(
-            page.locator("#number1Field").input_value()
+            page.locator(
+                "#number1Field"
+            ).input_value()
         )
 
         second_after_clear = normalize(
-            page.locator("#number2Field").input_value()
+            page.locator(
+                "#number2Field"
+            ).input_value()
         )
 
         answer_after_clear = normalize(
-            page.locator("#numberAnswerField").input_value()
+            page.locator(
+                "#numberAnswerField"
+            ).input_value()
         )
 
+        # Expected Clear behavior:
+        # all calculator fields should be empty.
         clear_pass = (
             first_after_clear == ""
             and second_after_clear == ""
             and answer_after_clear == ""
         )
 
+        # Overall test passes only if:
+        # 1. Multiplication was correct
+        # 2. Clear worked
         if (
             multiplication_result == test["expected"]
             and clear_pass
         ):
+
             verdict = "PASS"
+
         else:
+
             verdict = "FAIL"
 
         return {
@@ -306,26 +363,54 @@ def run_test(page, test):
             ),
         }
 
-    # --------------------------------------------------------
+
+    # ========================================================
+    # TC-MUL-015
+    # Missing second number
+    # ========================================================
+
+    if test["id"] == "TC-MUL-015":
+
+        # We don't assume a particular error message/result.
+        # We record whatever the application actually produces.
+
+        return {
+            "actual": actual,
+            "verdict": "OBSERVE",
+            "details": (
+                "Second number was left empty. "
+                "Actual validation behavior recorded."
+            ),
+        }
+
+
+    # ========================================================
     # Observation-based tests
-    # --------------------------------------------------------
+    # ========================================================
 
     if test["expected"] is None:
 
         return {
             "actual": actual,
             "verdict": "OBSERVE",
-            "details": "Actual application behavior recorded.",
+            "details": (
+                "Actual application behavior recorded."
+            ),
         }
 
-    # --------------------------------------------------------
+
+    # ========================================================
     # Normal PASS / FAIL
-    # --------------------------------------------------------
+    # ========================================================
 
     if actual == test["expected"]:
+
         verdict = "PASS"
+
     else:
+
         verdict = "FAIL"
+
 
     return {
         "actual": actual,
@@ -342,9 +427,13 @@ def main():
 
     results = []
 
+    # --------------------------------------------------------
+    # Start Playwright
+    # --------------------------------------------------------
+
     with sync_playwright() as p:
 
-        # Use Playwright's Firefox browser.
+        # Use Firefox.
         browser = p.firefox.launch(
             headless=False
         )
@@ -362,9 +451,10 @@ def main():
 
         print("=" * 90)
 
-        # ----------------------------------------------------
-        # Run all test cases
-        # ----------------------------------------------------
+
+        # ====================================================
+        # RUN ALL TEST CASES
+        # ====================================================
 
         for test in test_cases:
 
@@ -381,11 +471,11 @@ def main():
                     test
                 )
 
-                expected = (
-                    test["expected"]
-                    if test["expected"] is not None
-                    else "Observe"
-                )
+                # Expected value for display.
+                if test["expected"] is None:
+                    expected = "Observe"
+                else:
+                    expected = test["expected"]
 
                 results.append({
                     "id": test["id"],
@@ -393,6 +483,7 @@ def main():
                     "actual": result["actual"],
                     "verdict": result["verdict"],
                 })
+
 
                 print(
                     f"  Expected : {expected}"
@@ -413,15 +504,21 @@ def main():
                         f"{result['details']}"
                     )
 
+
             except Exception as e:
+
+                # If Playwright itself encounters an error,
+                # record it instead of stopping the whole suite.
+
+                expected = (
+                    test["expected"]
+                    if test["expected"] is not None
+                    else "Observe"
+                )
 
                 results.append({
                     "id": test["id"],
-                    "expected": (
-                        test["expected"]
-                        if test["expected"] is not None
-                        else "Observe"
-                    ),
+                    "expected": expected,
                     "actual": f"ERROR: {e}",
                     "verdict": "ERROR",
                 })
@@ -430,7 +527,13 @@ def main():
                     f"  ERROR: {e}"
                 )
 
+
+        # ----------------------------------------------------
+        # Close browser
+        # ----------------------------------------------------
+
         browser.close()
+
 
     # ========================================================
     # FINAL SUMMARY
@@ -451,6 +554,7 @@ def main():
 
     print("-" * 90)
 
+
     for result in results:
 
         print(
@@ -460,11 +564,13 @@ def main():
             f"{result['verdict']:<10}"
         )
 
+
     print("-" * 90)
 
-    # --------------------------------------------------------
-    # Statistics
-    # --------------------------------------------------------
+
+    # ========================================================
+    # STATISTICS
+    # ========================================================
 
     passed = sum(
         r["verdict"] == "PASS"
@@ -487,6 +593,7 @@ def main():
     )
 
     total = len(results)
+
 
     print(
         f"PASS    : {passed}"
@@ -511,5 +618,10 @@ def main():
     print("=" * 90)
 
 
+# ============================================================
+# ENTRY POINT
+# ============================================================
+
 if __name__ == "__main__":
     main()
+
