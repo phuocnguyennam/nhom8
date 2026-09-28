@@ -1,5 +1,9 @@
 # Multiplication Test Summary
 
+**Website** [Basic Calculator](https://testsheepnz.github.io/BasicCalculator)  
+**Date** 2026-09-28  
+**Tester:** Nguyễn Nhật Khang
+
 ## Scope
 
 This summary covers the 15 multiplication test cases in `test_cases/multiplication/` and the recorded results in `test_runs/build1` through `test_runs/build8`.
