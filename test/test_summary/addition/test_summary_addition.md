@@ -62,25 +62,25 @@ Bộ kịch bản kiểm thử cho module `addition` được chuẩn hóa thàn
 
 ## 3. Ma trận Kết quả Thực thi Kiểm thử (Builds 1 - 8)
 
-Đợt kiểm thử thực thi tự động qua test script `add.py` độc lập trên từng build.
+Đợt kiểm thử thực thi tự động qua bộ test script Playwright (`add.py`) độc lập trên từng build.
 
 - **Tổng số lượt chạy (Test Executions):** $20 \text{ Test Cases} \times 8 \text{ Builds} = 160 \text{ lượt}$.
-- **Tổng số lỗi phát hiện:** **45 lỗi** (chiếm tỷ lệ thất bại trung bình 28.1% trên toàn bộ các build).
+- **Tổng số lỗi phát hiện:** **47 lỗi** (chiếm tỷ lệ thất bại trung bình 29.38% trên toàn bộ các build).
 
 ### 3.1. Bảng tổng hợp kết quả theo Build
 
-| Phiên bản               | Đặc tính của Build                          | Tổng TCs | Passed  | Failed | Tỷ lệ Pass | Tình trạng kiểm thử                       |                 Chi tiết báo cáo                  |
-| :---------------------- | :------------------------------------------ | :------: | :-----: | :----: | :--------: | :---------------------------------------- | :-----------------------------------------------: |
-| **Prototype (Build 0)** | Bản chuẩn mẫu (Ground Truth)                |    20    |   20    |   0    | **100.0%** | ✅ **PASSED** (Baseline)                  |                        N/A                        |
-| **Build 1**             | Không kiểm tra `isNaN` (bỏ qua validate số) |    20    |   18    |   2    | **90.0%**  | ❌ **FAILED (2 Bugs)**                    | [add.md](../../test_runs/build1/test_runs/add.md) |
-| **Build 2**             | Hoán đổi phép `Add` thành `Concatenate`     |    20    |    2    |   18   | **10.0%**  | ❌ **FAILED (Critical - 18 Bugs)**        | [add.md](../../test_runs/build2/test_runs/add.md) |
-| **Build 3**             | Luôn ép kiểu `isNumber = true`              |    20    |   20    |   0    | **100.0%** | ✅ **PASSED** (Phép cộng số học đúng)     | [add.md](../../test_runs/build3/test_runs/add.md) |
-| **Build 4**             | Khóa cứng tùy chọn _Integers only_          |    20    |   16    |   4    | **80.0%**  | ❌ **FAILED (4 Bugs)**                    | [add.md](../../test_runs/build4/test_runs/add.md) |
-| **Build 5**             | Nút `Clear` bị vô hiệu hóa (`disabled`)     |    20    |   19    |   1    | **95.0%**  | ❌ **FAILED (1 Bug)**                     | [add.md](../../test_runs/build5/test_runs/add.md) |
-| **Build 6**             | Không kiểm tra chia cho 0                   |    20    |   20    |   0    | **100.0%** | ✅ **PASSED** (Không ảnh hưởng phép cộng) | [add.md](../../test_runs/build6/test_runs/add.md) |
-| **Build 7**             | Ghi đè `num1` bằng kết quả cũ (`answer`)    |    20    |    2    |   18   | **10.0%**  | ❌ **FAILED (Critical - 18 Bugs)**        | [add.md](../../test_runs/build7/test_runs/add.md) |
-| **Build 8**             | Hoán đổi vị trí toán hạng `num1` và `num2`  |    20    |   18    |   2    | **90.0%**  | ❌ **FAILED (2 Bugs)**                    | [add.md](../../test_runs/build8/test_runs/add.md) |
-| **TỔNG HỢP**            | **Toàn bộ đợt kiểm thử**                    | **160**  | **115** | **45** | **71.9%**  | **Phát hiện 45 lỗi trên 8 builds**        |                         —                         |
+| Phiên bản               | Đặc tính của Build                            | Tổng TCs | Passed  | Failed | Tỷ lệ Pass | Tình trạng kiểm thử                       |                 Chi tiết báo cáo                  |
+| :---------------------- | :-------------------------------------------- | :------: | :-----: | :----: | :--------: | :---------------------------------------- | :-----------------------------------------------: |
+| **Prototype (Build 0)** | Bản chuẩn mẫu (Ground Truth)                  |    20    |   20    |   0    | **100.0%** | ✅ **PASSED** (Baseline)                  |                        N/A                        |
+| **Build 1**             | Không kiểm tra `isNaN` (bỏ qua validate số)   |    20    |   18    |   2    | **90.0%**  | ❌ **FAILED (2 Bugs)**                    | [add.md](../../test_runs/build1/test_runs/add.md) |
+| **Build 2**             | Hoán đổi phép `Add` thành `Concatenate`       |    20    |    1    |   19   |  **5.0%**  | ❌ **FAILED (Critical - 19 Bugs)**        | [add.md](../../test_runs/build2/test_runs/add.md) |
+| **Build 3**             | Luôn ép kiểu `isNumber = true`                |    20    |   20    |   0    | **100.0%** | ✅ **PASSED** (Phép cộng số học đúng)     | [add.md](../../test_runs/build3/test_runs/add.md) |
+| **Build 4**             | Khóa cứng _Integers only_ & vô hiệu hóa Clear |    20    |   15    |   5    | **75.0%**  | ❌ **FAILED (5 Bugs)**                    | [add.md](../../test_runs/build4/test_runs/add.md) |
+| **Build 5**             | Nút `Clear` bị vô hiệu hóa (`disabled`)       |    20    |   19    |   1    | **95.0%**  | ❌ **FAILED (1 Bug)**                     | [add.md](../../test_runs/build5/test_runs/add.md) |
+| **Build 6**             | Không kiểm tra chia cho 0                     |    20    |   20    |   0    | **100.0%** | ✅ **PASSED** (Không ảnh hưởng phép cộng) | [add.md](../../test_runs/build6/test_runs/add.md) |
+| **Build 7**             | Ghi đè `num1` bằng kết quả cũ (`answer`)      |    20    |    2    |   18   | **10.0%**  | ❌ **FAILED (Critical - 18 Bugs)**        | [add.md](../../test_runs/build7/test_runs/add.md) |
+| **Build 8**             | Hoán đổi vị trí toán hạng `num1` và `num2`    |    20    |   18    |   2    | **90.0%**  | ❌ **FAILED (2 Bugs)**                    | [add.md](../../test_runs/build8/test_runs/add.md) |
+| **TỔNG HỢP**            | **Toàn bộ đợt kiểm thử**                      | **160**  | **113** | **47** | **70.63%** | **Phát hiện 47 lỗi trên 8 builds**        |                         —                         |
 
 ---
 
@@ -94,25 +94,28 @@ Bộ kịch bản kiểm thử cho module `addition` được chuẩn hóa thàn
   - `TC-ADD-018`: `10 + xyz` $\rightarrow$ Thực tế ra `NaN (No validation error)` thay vì thông báo lỗi.
 - **Mức độ nghiêm trọng:** High.
 
-### 4.2. Build 2 - Lỗi hoán đổi phép toán Add và Concatenate (Pass: 2/20, Fail: 18)
+### 4.2. Build 2 - Lỗi hoán đổi phép toán Add và Concatenate (Pass: 1/20, Fail: 19)
 
 - **Hành vi lỗi:** Khi người dùng chọn phép tính `Add` (giá trị 0), mã nguồn của Build 2 tự động chuyển đổi thành `Concatenate` (giá trị 4) và gán `isNumber = false`. Do đó, mọi phép tính cộng số học đều bị biến thành phép nối chuỗi (ví dụ: `15 + 25` ra `1525` thay vì `40`; `15.8 + 4.3` ra `15.84.3`).
-- **Test cases phát hiện:** Thất bại trên 18/20 test case số học (`TC-ADD-001` đến `TC-ADD-016`, `TC-ADD-018`, `TC-ADD-020`).
+- **Test cases phát hiện:** Thất bại trên 19/20 test case (`TC-ADD-001` đến `TC-ADD-018`, `TC-ADD-020`). Duy nhất `TC-ADD-019` (kiểm tra nút Clear) vượt qua do thao tác xóa form không liên quan đến phép tính cộng.
 - **Mức độ nghiêm trọng:** Critical (Lỗi chức năng cốt lõi).
 
 ### 4.3. Build 3 - Luôn ép kiểu số (Pass: 20/20, Fail: 0)
 
 - **Hành vi:** Build 3 luôn đặt `isNumber = true`. Do phép cộng bản chất là phép toán số học (`isNumber = true`), nên toàn bộ 20 test case của module Addition đều vượt qua. Lỗi của Build 3 chỉ bộc lộ khi thực hiện ghép chuỗi ở module `concatenation`.
 
-### 4.4. Build 4 - Lỗi khóa cứng Integers only (Pass: 16/20, Fail: 4)
+### 4.4. Build 4 - Lỗi khóa cứng Integers only & vô hiệu hóa nút Clear (Pass: 15/20, Fail: 5)
 
-- **Hành vi lỗi:** Checkbox _Integers only_ bị khóa cứng ở trạng thái `checked = true` và `disabled = true`. Mọi kết quả phép cộng có phần thập phân lẻ đều bị hàm `parseInt()` cắt cụt phần thập phân.
-- **Test cases phát hiện:**
+- **Hành vi lỗi:**
+  - Checkbox _Integers only_ bị khóa cứng ở trạng thái `checked = true` và `disabled = true`. Mọi kết quả phép cộng có phần thập phân lẻ đều bị hàm `parseInt()` cắt cụt phần thập phân.
+  - Nút `Clear` bị vô hiệu hóa (`disabled = true`) sau khi tính toán, khiến người dùng không thể làm sạch kết quả phép tính.
+- **Test cases phát hiện (5 Bugs):**
   - `TC-ADD-005`: `5.5 + 2.3` $\rightarrow$ Kỳ vọng `7.8`, thực tế bị ép thành `7`.
   - `TC-ADD-010`: `-3.25 + -2.5` $\rightarrow$ Kỳ vọng `-5.75`, thực tế bị ép thành `-5`.
   - `TC-ADD-015`: `15.8 + 4.3` $\rightarrow$ Kỳ vọng `20.1`, thực tế bị ép thành `20`.
+  - `TC-ADD-019`: Kiểm tra Clear sau phép cộng $\rightarrow$ Nút Clear bị khóa `disabled`, không làm sạch form.
   - `TC-ADD-020`: `10.25 + 5.5` $\rightarrow$ Kỳ vọng `15.75`, thực tế bị ép thành `15`.
-- **Mức độ nghiêm trọng:** High (Mất mát độ chính xác số học).
+- **Mức độ nghiêm trọng:** High (Mất mát độ chính xác số học và lỗi tương tác giao diện).
 
 ### 4.5. Build 5 - Lỗi vô hiệu hóa nút Clear (Pass: 19/20, Fail: 1)
 

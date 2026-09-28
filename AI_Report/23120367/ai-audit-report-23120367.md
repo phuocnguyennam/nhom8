@@ -153,7 +153,7 @@
   - Báo cáo gồm 6 phần chuyên sâu:
     1. Tổng quan & Phạm vi thực thi (Executive Summary & Scope).
     2. Danh mục chi tiết 20 ca kiểm thử chức năng Phép cộng.
-    3. Ma trận kết quả thực thi tổng thể trên 8 bản build (160 lượt chạy: 115 Passed, 45 Failed).
+    3. Ma trận kết quả thực thi tổng thể trên 8 bản build (160 lượt chạy: 113 Passed, 47 Failed).
     4. Phân tích khiếm khuyết chi tiết theo từng bản build (từ Build 1 đến Build 8).
     5. Đánh giá độ phủ kiểm thử (Test Coverage đạt 100%) và hiệu quả phát hiện lỗi.
-    6. Kết luận & Khuyến nghị nghiệm thu (Chỉ định duy nhất Build 7 đạt chất lượng release với tỷ lệ Pass 100%).
+    6. Kết luận & Khuyến nghị nghiệm thu (Chỉ định duy nhất Prototype/Build chuẩn đạt chất lượng release).

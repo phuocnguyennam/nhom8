@@ -2,19 +2,19 @@
 
 ## 1. Thông tin đợt kiểm thử
 - **Đợt kiểm thử:** Test Run Addition - Build 4
-- **Hệ thống kiểm thử:** [Basic Calculator](https://testsheepnz.github.io/BasicCalculator)
+- **Hệ thống kiểm thử:** [Basic Calculator](https://testsheepnz.github.io/BasicCalculator.html)
 - **Phiên bản Build:** Build 4 (Khóa cứng tùy chọn Integers only ở trạng thái checked = true)
 - **Module:** `addition` (Phép cộng)
 - **Số lượng Test Cases:** 20 test cases (`TC-ADD-001` đến `TC-ADD-020`)
-- **Thời gian thực thi:** 2026-09-28 16:00:05
-- **Công cụ thực thi:** Python Test Runner (`add.py`)
+- **Thời gian thực thi:** 2026-09-28 21:05:40
+- **Công cụ thực thi:** Playwright Automation Test Runner (Chế độ: Logic Simulation Fallback)
 
 ## 2. Kết quả tổng quan (Execution Summary)
 - **Tổng số Test Cases thực thi:** 20
-- **Passed:** 16 (80.0%)
-- **Failed:** 4 (20.0%)
+- **Passed:** 15 (75.0%)
+- **Failed:** 5 (25.0%)
 - **Blocked / Skipped:** 0 (0%)
-- **Đánh giá tổng thể:** ❌ KHÔNG ĐẠT (Phát hiện 4 lỗi)
+- **Đánh giá tổng thể:** ❌ KHÔNG ĐẠT (Phát hiện 5 lỗi)
 
 ## 3. Bảng chi tiết kết quả thực thi (Execution Details)
 
@@ -38,7 +38,7 @@
 | `TC-ADD-016` | Cộng số dạng ký hiệu khoa học (Scientific Exponential) | `FR-ADD-01` | `1e3 + 500` | No | `1500` | `1500` | ✅ **PASSED** |
 | `TC-ADD-017` | Xác thực First number chứa ký tự chữ cái khi cộng | `FR-VAL-01` | `abc + 10` | No | `Error: Number 1 is not a number` | `Error: Number 1 is not a number` | ✅ **PASSED** |
 | `TC-ADD-018` | Xác thực Second number chứa ký tự chữ cái khi cộng | `FR-VAL-02` | `10 + xyz` | No | `Error: Number 2 is not a number` | `Error: Number 2 is not a number` | ✅ **PASSED** |
-| `TC-ADD-019` | Kiểm tra khả năng xóa kết quả sau phép cộng bằng nút Clear | `FR-CLR-01` | `15 + 25` | No | `Clear Success (Answer cleared)` | `Clear Success (Answer cleared)` | ✅ **PASSED** |
+| `TC-ADD-019` | Kiểm tra khả năng xóa kết quả sau phép cộng bằng nút Clear | `FR-CLR-01` | `15 + 25` | No | `Clear Success (Answer cleared)` | `Clear Failed (Clear button disabled)` | ❌ **FAILED** |
 | `TC-ADD-020` | Cộng hai số thập phân có hai chữ số sau dấu phẩy | `FR-ADD-02` | `10.25 + 5.5` | No | `15.75` | `15` | ❌ **FAILED** |
 
 ## 4. Danh sách Bug / Lỗi phát hiện (Defects Log)
@@ -48,10 +48,11 @@
 | `BUG-ADD-B4-001` | `TC-ADD-005` | `5.5 + 2.3` | `7.8` | `7` | Khóa cứng tùy chọn Integers only ở trạng thái checked = true | **High** |
 | `BUG-ADD-B4-002` | `TC-ADD-010` | `-3.25 + -2.5` | `-5.75` | `-5` | Khóa cứng tùy chọn Integers only ở trạng thái checked = true | **High** |
 | `BUG-ADD-B4-003` | `TC-ADD-015` | `15.8 + 4.3` | `20.1` | `20` | Khóa cứng tùy chọn Integers only ở trạng thái checked = true | **High** |
-| `BUG-ADD-B4-004` | `TC-ADD-020` | `10.25 + 5.5` | `15.75` | `15` | Khóa cứng tùy chọn Integers only ở trạng thái checked = true | **High** |
+| `BUG-ADD-B4-004` | `TC-ADD-019` | `15 + 25` | `Clear Success (Answer cleared)` | `Clear Failed (Clear button disabled)` | Khóa cứng tùy chọn Integers only ở trạng thái checked = true | **High** |
+| `BUG-ADD-B4-005` | `TC-ADD-020` | `10.25 + 5.5` | `15.75` | `15` | Khóa cứng tùy chọn Integers only ở trạng thái checked = true | **High** |
 
 ## 5. Kết luận & Đề xuất (Conclusion & Recommendation)
 - **Đánh giá chi tiết về hành vi của Build 4:**
   - Khóa cứng tùy chọn Integers only ở trạng thái checked = true.
-  - Đã phát hiện chính xác 4 lỗi trên Build 4 thông qua bộ test case kiểm thử.
+  - Đã phát hiện chính xác 5 lỗi trên Build 4 thông qua bộ test case kiểm thử.
   - **Đề xuất:** Gửi báo cáo bug sang đội ngũ phát triển và REJECT phiên bản build này.

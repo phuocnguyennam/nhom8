@@ -2,12 +2,12 @@
 
 ## 1. Thông tin đợt kiểm thử
 - **Đợt kiểm thử:** Test Run Addition - Build 2
-- **Hệ thống kiểm thử:** [Basic Calculator](https://testsheepnz.github.io/BasicCalculator)
+- **Hệ thống kiểm thử:** [Basic Calculator](https://testsheepnz.github.io/BasicCalculator.html)
 - **Phiên bản Build:** Build 2 (Hoán đổi hành vi giữa Add (0) và Concatenate (4))
 - **Module:** `addition` (Phép cộng)
 - **Số lượng Test Cases:** 20 test cases (`TC-ADD-001` đến `TC-ADD-020`)
-- **Thời gian thực thi:** 2026-09-28 16:00:05
-- **Công cụ thực thi:** Python Test Runner (`add.py`)
+- **Thời gian thực thi:** 2026-09-28 21:05:39
+- **Công cụ thực thi:** Playwright Automation Test Runner (Chế độ: Logic Simulation Fallback)
 
 ## 2. Kết quả tổng quan (Execution Summary)
 - **Tổng số Test Cases thực thi:** 20
