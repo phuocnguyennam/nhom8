@@ -21,9 +21,9 @@ Addition / Functional / Equivalence Partitioning
 
 ## Test steps
 1. Chọn Build: Prototype
-2. Nhập giá trị '50' vào ô 'First number'
-3. Nhập giá trị '-50' vào ô 'Second number'
-4. Chọn phép tính 'Add' tại ô dropdown 'Operation'
+2. Nhập '50' vào ô 'First number'
+3. Nhập '-50' vào ô 'Second number'
+4. Chọn phép tính 'Add'
 5. Nhấn nút 'Calculate'
 
 ## Expected result

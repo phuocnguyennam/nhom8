@@ -21,9 +21,9 @@ Addition / Functional / Boundary Value Analysis
 
 ## Test steps
 1. Chọn Build: Prototype
-2. Nhập giá trị '1234' vào ô 'First number'
-3. Nhập giá trị '0' vào ô 'Second number'
-4. Chọn phép tính 'Add' tại ô dropdown 'Operation'
+2. Nhập '1234' vào ô 'First number'
+3. Nhập '0' vào ô 'Second number'
+4. Chọn phép tính 'Add'
 5. Nhấn nút 'Calculate'
 
 ## Expected result

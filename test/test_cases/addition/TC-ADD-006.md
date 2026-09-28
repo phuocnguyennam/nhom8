@@ -1,4 +1,4 @@
-# TC-ADD-006: Cộng hai số đạt giới hạn độ dài 10 chữ số (Boundary)
+# TC-ADD-006: Cộng số đạt giới hạn độ dài 10 chữ số
 
 ## Requirement ID
 FR-ADD-03
@@ -21,7 +21,7 @@ Addition / Functional / Boundary Value Analysis
 
 ## Test steps
 1. Chọn Build: Prototype
-2. Nhập '999999999' (9 chữ số) vào ô 'First number'
+2. Nhập '999999999' vào ô 'First number'
 3. Nhập '1' vào ô 'Second number'
 4. Chọn phép tính 'Add'
 5. Nhấn nút 'Calculate'

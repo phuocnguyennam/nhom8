@@ -21,13 +21,13 @@ Addition / Functional / Boundary Value Analysis
 
 ## Test steps
 1. Chọn Build: Prototype
-2. Nhập giá trị '-10' vào ô 'First number'
-3. Nhập giá trị '-20' vào ô 'Second number'
-4. Chọn phép tính 'Add' tại ô dropdown 'Operation'
+2. Nhập '-10' vào ô 'First number'
+3. Nhập '-20' vào ô 'Second number'
+4. Chọn phép tính 'Add'
 5. Nhấn nút 'Calculate'
 
 ## Expected result
-Trường 'Answer' hiển thị chính xác kết quả '-30'. Không xuất hiện lỗi xác thực.
+Trường 'Answer' hiển thị chính xác kết quả '-30'.
 
 ## Status / Related bugs
 Not Run / None

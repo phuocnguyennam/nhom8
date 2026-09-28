@@ -1,4 +1,4 @@
-# TC-ADD-015: Cộng hai số thập phân dương với Integers only tắt
+# TC-ADD-020: Cộng hai số thập phân có hai chữ số sau dấu phẩy
 
 ## Requirement ID
 FR-ADD-02
@@ -15,21 +15,21 @@ Addition / Functional / Boundary Value Analysis
 | Field | Value |
 | --- | --- |
 | Build | Prototype |
-| First number | 15.8 |
-| Second number | 4.3 |
+| First number | 10.25 |
+| Second number | 5.5 |
 | Operation | Add |
 | Integers only | Unchecked |
 
 ## Test steps
 1. Chọn Build: Prototype
-2. Nhập '15.8' vào ô 'First number'
-3. Nhập '4.3' vào ô 'Second number'
+2. Nhập '10.25' vào ô 'First number'
+3. Nhập '5.5' vào ô 'Second number'
 4. Chọn phép tính 'Add'
 5. Xác nhận checkbox 'Integers only' KHÔNG được tích chọn
 6. Nhấn nút 'Calculate'
 
 ## Expected result
-Tổng số thực là 15.8 + 4.3 = 20.1, trường 'Answer' phải hiển thị chính xác '20.1' (không bị làm tròn thành 20).
+Trường 'Answer' hiển thị chính xác kết quả số thực '15.75' (không bị làm tròn thành 15).
 
 ## Status / Related bugs
 Not Run / None

@@ -1,4 +1,4 @@
-# TC-ADD-016: Cộng số dạng ký hiệu khoa học (Scientific Exponential Notation)
+# TC-ADD-016: Cộng số dạng ký hiệu khoa học (Scientific Exponential)
 
 ## Requirement ID
 FR-ADD-01
@@ -21,13 +21,13 @@ Addition / Functional / Equivalence Partitioning
 
 ## Test steps
 1. Chọn Build: Prototype
-2. Nhập '1e3' (tương đương 1000) vào ô 'First number'
+2. Nhập '1e3' vào ô 'First number'
 3. Nhập '500' vào ô 'Second number'
 4. Chọn phép tính 'Add'
 5. Nhấn nút 'Calculate'
 
 ## Expected result
-Hệ thống nhận diện định dạng số mũ khoa học hợp lệ, tính toán 1000 + 500 và hiển thị kết quả '1500' trong ô 'Answer'.
+Hệ thống nhận diện định dạng số mũ 1000 + 500 và hiển thị kết quả '1500' trong ô 'Answer'.
 
 ## Status / Related bugs
 Not Run / None

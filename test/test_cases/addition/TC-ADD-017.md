@@ -1,10 +1,10 @@
-# TC-ADD-012: Cộng hai số có khoảng trắng ở đầu hoặc cuối
+# TC-ADD-017: Xác thực First number chứa ký tự chữ cái khi thực hiện phép cộng
 
 ## Requirement ID
-FR-ADD-01
+FR-VAL-01
 
 ## Module / Test type / Technique
-Addition / Functional / Robustness Testing
+Addition / Negative Testing / Error Guessing
 
 ## Preconditions
 - Trình duyệt đã mở trang web Basic Calculator (https://testsheepnz.github.io/BasicCalculator)
@@ -14,20 +14,19 @@ Addition / Functional / Robustness Testing
 | Field | Value |
 | --- | --- |
 | Build | Prototype |
-| First number |  30  |
-| Second number |  70  |
+| First number | abc |
+| Second number | 10 |
 | Operation | Add |
-| Integers only | Unchecked |
 
 ## Test steps
 1. Chọn Build: Prototype
-2. Nhập ' 30 ' vào ô 'First number'
-3. Nhập ' 70 ' vào ô 'Second number'
+2. Nhập 'abc' vào ô 'First number'
+3. Nhập '10' vào ô 'Second number'
 4. Chọn phép tính 'Add'
 5. Nhấn nút 'Calculate'
 
 ## Expected result
-JavaScript ép kiểu chuỗi có khoảng trắng thành số hợp lệ (30 + 70 = 100), trường 'Answer' hiển thị '100'.
+Hệ thống dừng tính toán và hiển thị thông báo lỗi màu đỏ: 'Number 1 is not a number'. Trường Answer không hiển thị NaN.
 
 ## Status / Related bugs
 Not Run / None
