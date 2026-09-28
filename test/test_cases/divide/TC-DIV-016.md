@@ -29,3 +29,13 @@ Divide / Functional / Boundary Value Analysis
 
 ## Status / Related bugs
 Not Run / None
+
+## Actual result and Verdict
+- **Build 1:** Actual: Giá trị nhận="1234567890", Answer="1234567890", lỗi="" | Verdict: ✅ PASS
+- **Build 2:** Actual: Giá trị nhận="1234567890", Answer="1234567890", lỗi="" | Verdict: ✅ PASS
+- **Build 3:** Actual: Giá trị nhận="1234567890", Answer="1234567890", lỗi="" | Verdict: ✅ PASS
+- **Build 4:** Actual: Giá trị nhận="1234567890", Answer="1234567890", lỗi="" | Verdict: ✅ PASS
+- **Build 5:** Actual: Giá trị nhận="1234567890", Answer="1234567890", lỗi="" | Verdict: ✅ PASS
+- **Build 6:** Actual: Giá trị nhận="1234567890", Answer="1234567890", lỗi="" | Verdict: ✅ PASS
+- **Build 7:** Actual: Giá trị nhận="1234567890", Answer="0", lỗi="" | Verdict: ❌ FAIL
+- **Build 8:** Actual: Giá trị nhận="1234567890", Answer="8.10000007371e-10", lỗi="" | Verdict: ❌ FAIL

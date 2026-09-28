@@ -29,3 +29,13 @@ Phép tính lần 2 lấy đúng giá trị mới nhập trong "First number" l�
 
 ## Status / Related bugs
 Not Run / None
+
+## Actual result and Verdict
+- **Build 1:** Actual: Lần 1 Answer="10", Lần 2 Answer="10", lỗi="" | Verdict: ❌ FAIL
+- **Build 2:** Actual: Lần 1 Answer="10", Lần 2 Answer="50", lỗi="" | Verdict: ✅ PASS
+- **Build 3:** Actual: Lần 1 Answer="10", Lần 2 Answer="50", lỗi="" | Verdict: ✅ PASS
+- **Build 4:** Actual: Lần 1 Answer="10", Lần 2 Answer="50", lỗi="" | Verdict: ✅ PASS
+- **Build 5:** Actual: Lần 1 Answer="10", Lần 2 Answer="10", lỗi="" | Verdict: ❌ FAIL
+- **Build 6:** Actual: Lần 1 Answer="10", Lần 2 Answer="10", lỗi="" | Verdict: ❌ FAIL
+- **Build 7:** Actual: Lần 1 Answer="0", Lần 2 Answer="0", lỗi="" | Verdict: ❌ FAIL
+- **Build 8:** Actual: Lần 1 Answer="0.1", Lần 2 Answer="0.02", lỗi="" | Verdict: ❌ FAIL

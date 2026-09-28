@@ -28,3 +28,13 @@ Trường "Answer" hiển thị giá trị "3".
 
 ## Status / Related bugs
 Not Run / None
+
+## Actual result and Verdict
+- **Build 1:** Actual: Answer="3", lỗi="" | Verdict: ✅ PASS
+- **Build 2:** Actual: Answer="3", lỗi="" | Verdict: ✅ PASS
+- **Build 3:** Actual: Answer="3", lỗi="" | Verdict: ✅ PASS
+- **Build 4:** Actual: Answer="3", lỗi="" | Verdict: ✅ PASS
+- **Build 5:** Actual: Answer="3", lỗi="" | Verdict: ✅ PASS
+- **Build 6:** Actual: Answer="3", lỗi="" | Verdict: ✅ PASS
+- **Build 7:** Actual: Answer="0", lỗi="" | Verdict: ❌ FAIL
+- **Build 8:** Actual: Answer="0.3333333333333333", lỗi="" | Verdict: ❌ FAIL

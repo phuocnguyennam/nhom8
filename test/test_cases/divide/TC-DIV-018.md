@@ -30,3 +30,13 @@ Nút "Clear" bấm được bình thường (không bị disable). Sau khi bấm
 
 ## Status / Related bugs
 Not Run / None
+
+## Actual result and Verdict
+- **Build 1:** Actual: Trước Clear Answer="5"; Sau Clear: answer_empty=False, error_empty=True, checkbox_unchecked=False | Verdict: ❌ FAIL
+- **Build 2:** Actual: Trước Clear Answer="5"; Sau Clear: answer_empty=False, error_empty=True, checkbox_unchecked=False | Verdict: ❌ FAIL
+- **Build 3:** Actual: Trước Clear Answer="5"; Sau Clear: answer_empty=False, error_empty=True, checkbox_unchecked=False | Verdict: ❌ FAIL
+- **Build 4:** Actual: Trước Clear Answer="5"; Sau Clear: answer_empty=True, error_empty=True, checkbox_unchecked=True | Verdict: ✅ PASS
+- **Build 5:** Actual: Trước Clear Answer="5"; Sau Clear: answer_empty=False, error_empty=True, checkbox_unchecked=False | Verdict: ❌ FAIL
+- **Build 6:** Actual: Trước Clear Answer="5"; Sau Clear: answer_empty=False, error_empty=True, checkbox_unchecked=False | Verdict: ❌ FAIL
+- **Build 7:** Actual: Trước Clear Answer="0"; Sau Clear: answer_empty=True, error_empty=True, checkbox_unchecked=True | Verdict: ✅ PASS
+- **Build 8:** Actual: Trước Clear Answer="0"; Sau Clear: answer_empty=False, error_empty=True, checkbox_unchecked=False | Verdict: ❌ FAIL

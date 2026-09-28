@@ -28,3 +28,13 @@ Hệ thống hiển thị thông báo lỗi màu đỏ tại errorMsgField: "Num
 
 ## Status / Related bugs
 Not Run / None
+
+## Actual result and Verdict
+- **Build 1:** Actual: Answer="NaN", lỗi="" | Verdict: ❌ FAIL
+- **Build 2:** Actual: Answer="", lỗi="Number 1 is not a number" | Verdict: ✅ PASS
+- **Build 3:** Actual: Answer="", lỗi="Number 1 is not a number" | Verdict: ✅ PASS
+- **Build 4:** Actual: Answer="", lỗi="Number 1 is not a number" | Verdict: ✅ PASS
+- **Build 5:** Actual: Answer="", lỗi="Number 1 is not a number" | Verdict: ✅ PASS
+- **Build 6:** Actual: Answer="", lỗi="Number 1 is not a number" | Verdict: ✅ PASS
+- **Build 7:** Actual: Answer="0", lỗi="" | Verdict: ❌ FAIL
+- **Build 8:** Actual: Answer="", lỗi="Number 2 is not a number" | Verdict: ❌ FAIL

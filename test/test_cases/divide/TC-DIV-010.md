@@ -28,3 +28,13 @@ Hệ thống chặn phép tính và hiển thị thông báo lỗi màu đỏ t�
 
 ## Status / Related bugs
 Not Run / None
+
+## Actual result and Verdict
+- **Build 1:** Actual: Answer="", lỗi="Divide by zero error!" | Verdict: ✅ PASS
+- **Build 2:** Actual: Answer="", lỗi="Divide by zero error!" | Verdict: ✅ PASS
+- **Build 3:** Actual: Answer="", lỗi="Divide by zero error!" | Verdict: ✅ PASS
+- **Build 4:** Actual: Answer="", lỗi="Divide by zero error!" | Verdict: ✅ PASS
+- **Build 5:** Actual: Answer="", lỗi="Divide by zero error!" | Verdict: ✅ PASS
+- **Build 6:** Actual: Answer="NaN", lỗi="" | Verdict: ❌ FAIL
+- **Build 7:** Actual: Answer="", lỗi="Divide by zero error!" | Verdict: ✅ PASS
+- **Build 8:** Actual: Answer="", lỗi="Divide by zero error!" | Verdict: ✅ PASS

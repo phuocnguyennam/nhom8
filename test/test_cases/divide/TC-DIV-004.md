@@ -28,3 +28,13 @@ Trường "Answer" hiển thị giá trị "0". Không có thông báo lỗi hi�
 
 ## Status / Related bugs
 Not Run / None
+
+## Actual result and Verdict
+- **Build 1:** Actual: Answer="0", lỗi="" | Verdict: ✅ PASS
+- **Build 2:** Actual: Answer="0", lỗi="" | Verdict: ✅ PASS
+- **Build 3:** Actual: Answer="0", lỗi="" | Verdict: ✅ PASS
+- **Build 4:** Actual: Answer="0", lỗi="" | Verdict: ✅ PASS
+- **Build 5:** Actual: Answer="0", lỗi="" | Verdict: ✅ PASS
+- **Build 6:** Actual: Answer="0", lỗi="" | Verdict: ✅ PASS
+- **Build 7:** Actual: Answer="0", lỗi="" | Verdict: ✅ PASS
+- **Build 8:** Actual: Answer="", lỗi="Divide by zero error!" | Verdict: ❌ FAIL
