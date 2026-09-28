@@ -4,7 +4,7 @@
 > **Dự án:** Basic Calculator Automated & Manual Testing  
 > **Hệ thống kiểm thử:** [Basic Calculator](https://testsheepnz.github.io/BasicCalculator)  
 > **Ngày lập báo cáo:** 2026-09-28  
-> **Đơn vị thực hiện:** Nhóm Kiểm thử (QA Team)
+> **Người thực hiện:** Trần Ngọc Diễm Thúy
 
 ---
 
@@ -134,7 +134,6 @@ Bộ kịch bản kiểm thử cho module `addition` được chuẩn hóa thàn
 
 ## 5. Đánh giá Mức độ Bao phủ Yêu cầu (Traceability & Coverage)
 
-Căn cứ theo [Traceability Matrix](../../test_summary/traceability-matrix.md):
 - **Độ bao phủ yêu cầu (Requirements Coverage):** **100%**.
   - `FR-ADD-01` (Cộng số nguyên): Được bao phủ bởi 10 Test Cases (`TC-ADD-001`, `002`, `003`, `004`, `007`, `008`, `009`, `012`, `014`, `016`).
   - `FR-ADD-02` (Cộng số thực / thập phân): Được bao phủ bởi 5 Test Cases (`TC-ADD-005`, `010`, `011`, `015`, `020`).
